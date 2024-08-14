@@ -78,3 +78,15 @@ function peixeComportamento() {
         document.getElementById('Arara').setAttribute('hidden','');
     }
 }
+
+//Funções para resgatar o valor dos select no PHP
+function mudouValorSelect() {
+    var especie = document.getElementById('iespecie');
+    var animal  = document.getElementById('ianimal');
+    var textoEspecie = especie.options[especie.selectedIndex].innerHTML;
+    var textoAnimal  = animal.options[animal.selectedIndex].innerHTML;
+
+    //altera o valor do input hidden para o select selecionado
+    document.getElementById("hiddenEspecie").value = textoEspecie;
+    document.getElementById("hiddenAnimal").value = textoAnimal;
+}

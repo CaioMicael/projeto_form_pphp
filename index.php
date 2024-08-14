@@ -13,7 +13,7 @@
                 <h1>Crie um animal!</h1>
                 <div class="input-single">
                     <label for="Animal">Selecione uma espécie</label>
-                    <select name="especie" id="iespecie" required autocomplete="off">
+                    <select name="especie" id="iespecie" required autocomplete="off" onchange="mudouValorSelect()">
                         <option value="null" selected></option>
                         <option value="Mamifero" id="Mamifero">Mamífero</option>
                         <option value="Reptil" id="Reptil">Réptil</option>
@@ -37,37 +37,39 @@
 
                 <div class="input-single">
                     <label for="peso">Peso:</label>
-                    <input class="input" type="text" name="peso" required autocomplete="off">
+                    <input class="input" type="text" name="peso" autocomplete="off">
                 </div>
 
                 <div class="input-single">
                     <label for="idade">Idade:</label>
-                    <input class="input" type="text" name="idade" required autocomplete="off">
+                    <input class="input" type="text" name="idade" autocomplete="off">
                 </div>
 
                 <div class="input-single">
                     <label for="Membros">Membros:</label>
-                    <input class="input" type="text" name="membros" required autocomplete="off">
+                    <input class="input" type="text" name="membros" autocomplete="off">
                 </div>
 
                 <div class="input-single">
                     <label for="CorPelo" id="icorpelo" hidden>Cor Pelo:</label>
-                    <input class="input" hidden id="acorpelo" type="text" name="corPelo" required autocomplete="off">
+                    <input class="input" hidden id="acorpelo" type="text" name="corPelo" autocomplete="off">
                 </div>
 
                 <div class="input-single">
                     <label for="CorEscama" id="icorescama" hidden>Cor Escama:</label>
-                    <input class="input" hidden id="acorescama" type="text" name="corEscama" required autocomplete="off">
+                    <input class="input" hidden id="acorescama" type="text" name="corEscama" autocomplete="off">
                 </div>
 
                 <div class="input-single">
                     <label for="CorPena" id="icorpena" hidden>Cor Pena:</label>
-                    <input class="input" id="acorpena" hidden type="text" name="corPena" required autocomplete="off" >
+                    <input class="input" id="acorpena" hidden type="text" name="corPena" autocomplete="off" >
                 </div>
 
                 <div class="button"> 
-                    <input type="submit" value="Enviar">
+                    <button type="submit">Enviar</button>
                 </div>
+                <input type="hidden" name="especie" id="hiddenEspecie"/>
+                <input type="hidden" name="animal" id="hiddenAnimal">
             </form> 
         </div>
     </section>
@@ -76,7 +78,6 @@
     </a>
 
     <?php
-        var_dump($_POST);
         require_once 'ClassMamifero.php';
         require_once 'ClassReptil.php';
         require_once 'ClassPeixe.php';
