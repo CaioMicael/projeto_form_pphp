@@ -18,7 +18,7 @@ function comportamento() {
             peixeComportamento();
         }
     }
-)
+ )
 }
 
 function mamiferoComportamento() {

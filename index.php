@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polimorfismo</title>
+    <link rel="stylesheet" href="layoutPadrao.css">
     <script src="View.js"></script>
 </head>
 <body>
     <section class="form-container">
         <div class="container">
             <form method="post" action="ClassControllerAnimal.php">
+                <fieldset>
+                    <legend>Cadastre um animal</legend>
                 <h1>Crie um animal!</h1>
                 <div class="input-single">
                     <label for="Animal">Selecione uma espécie</label>
@@ -70,12 +73,13 @@
                 </div>
                 <input type="hidden" name="especie" id="hiddenEspecie"/>
                 <input type="hidden" name="animal" id="hiddenAnimal">
-            </form> 
+            </form>
+        <a href="ClassControllerAnimal.php">
+            <button>Ver animais</button></a> 
+        </fieldset>
         </div>
     </section>
-    <a href="ClassControllerAnimal.php">
-        <button>Ver animais</button>
-    </a>
+
 
     <?php
         require_once 'ClassMamifero.php';
